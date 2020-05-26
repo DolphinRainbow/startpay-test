@@ -5,7 +5,7 @@ RUN mkdir -p /gitbook && npm config set registry http://r.cnpmjs.org && \
 
 WORKDIR /gitbook
 ADD gitbook.tar.gz /gitbook
-CMD ['gitbook','build']
+RUN gitbook build
 
 FROM nginx
 COPY --from=builder /gitbook/_book /usr/share/nginx/html
