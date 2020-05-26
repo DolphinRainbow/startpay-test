@@ -1,6 +1,6 @@
 FROM node:12 as builder
 
-RUN mkdir -p /gitbook && npm config set registry https://registry.npm.taobao.org && \
+RUN mkdir -p /gitbook && npm config set registry http://r.cnpmjs.org && \
     npm install gitbook -g
 
 WORKDIR /gitbook
