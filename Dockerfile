@@ -1,7 +1,7 @@
 FROM node:12 as builder
 
 RUN mkdir -p /gitbook && npm config set registry http://r.cnpmjs.org && \
-    npm install gitbook -g
+    npm install gitbook-cli -g
 
 WORKDIR /gitbook
 ADD gitbook.tar.gz /gitbook
