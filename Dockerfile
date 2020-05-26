@@ -1,7 +1,7 @@
 FROM node:12 as builder
 
 RUN mkdir -p /gitbook && npm config set registry https://registry.npm.taobao.org && \
-    npm install -g gitbook-cli
+    npm install gitbook -g
 
 WORKDIR /gitbook
 ADD gitbook.tar.gz /gitbook
